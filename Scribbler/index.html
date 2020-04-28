@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Scribbler</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  
+<body>
+    <canvas id="scribbler"></canvas>
+    <div class="button">
+        <button id="clear">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-clear"></use>
+            </svg>
+        </button>
+        <button id="download">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-save"></use>
+            </svg>
+        </button>
+    </div>
+    <div class="svg">
+        <svg id="pen" class="active icon" aria-hidden="true">
+            <use xlink:href="#icon-pen"></use>
+        </svg>
+        <svg id="eraser" class="icon" aria-hidden="true">
+            <use xlink:href="#icon-eraser"></use>
+        </svg>
+    </div>
+    <ul class="colors">
+        <li id="black" class="active black"></li>
+        <li id="red" class="red"></li>
+        <li id="green" class="green"></li>
+        <li id="blue" class="blue"></li>
+    </ul>
+    <ul class="sizes">
+        <li id="thin" class="active thin"></li>
+        <li id="thick" class="thick"></li>
+    </ul>
+    <script src="font.js"></script>   
+    <script src="script.js"></script>
+
+</body>
+</html>

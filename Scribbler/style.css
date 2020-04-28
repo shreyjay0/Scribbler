@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#canvas {
+    display: block;
+    background: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+body {
+    overflow: hidden;
+    background-color: rgba(184, 226, 228, 0.082);
+}
+
+.svg,
+.button {
+    position: fixed;
+    top: 0;
+    padding: 10px;
+}
+
+.button {
+    left: 0;
+}
+
+.button button {
+    width: 40px;
+    height: 40px;
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: 50%;
+    outline: inherit;
+    border: none;
+    color: #fff;
+}
+
+.button #clear {
+    background-color: #f56c6c;
+}
+
+.button #download {
+    background-color: deepskyblue;
+}
+
+.button button svg {
+    width: 1.2em;
+    height: 1.2em;
+    transition: all 0.3s;
+    margin: 0 5px;
+}
+
+svg.active {
+    fill: deepskyblue;
+    transform: scale(1.2);
+}
+
+.svg {
+    right: 0;
+}
+
+.svg svg {
+    width: 1.8em;
+    height: 1.8em;
+    transition: all 0.3s;
+    margin: 0 5px;
+}
+
+.colors {
+    position: fixed;
+    top: calc(50vh - 95px);
+    left: 14px;
+}
+
+.colors>li {
+    width: 20px;
+    height: 20px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+    margin: 10px 0;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.colors>li.black {
+    background: black;
+}
+
+.colors>li.red {
+    background: red;
+}
+
+.colors>li.green {
+    background: green;
+}
+
+.colors>li.blue {
+    background: blue;
+}
+
+.colors>li.active,
+.sizes>li.active {
+    transform: scale(1.2);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 1);
+}
+
+.sizes {
+    position: fixed;
+    top: 45px;
+    right: 25px;
+}
+
+.sizes>li {
+    margin: 15px 0;
+    transition: all 0.3s;
+}
+
+.sizes>li.thin {
+    height: 0;
+    width: 30px;
+    border-top: 5px solid black;
+}
+
+.sizes>li.thick {
+    height: 0;
+    width: 30px;
+    border-top: 10px solid black;
+}
