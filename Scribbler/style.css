@@ -1,39 +1,36 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-#canvas {
+#scribble {
     display: block;
-    background: white;
+    background: rgb(210, 179, 235);
     position: fixed;
     left: 0;
     top: 0;
-}
-
-.icon {
-    width: 1em;
-    height: 1em;
-    vertical-align: -0.15em;
-    fill: currentColor;
-    overflow: hidden;
 }
 
 body {
     overflow: hidden;
-    background-color: rgba(184, 226, 228, 0.082);
+    background-color: rgb(198, 178, 230);
 }
 
-.svg,
+.img
+ {
+    position: fixed;
+    top: 240px;
+    padding: 10px;
+    border-width:1em;
+}
+
 .button {
     position: fixed;
-    top: 0;
     padding: 10px;
-}
-
-.button {
-    left: 0;
+    right: 0;
+    top: 0;
 }
 
 .button button {
@@ -41,47 +38,51 @@ body {
     height: 40px;
     white-space: nowrap;
     cursor: pointer;
-    border-radius: 50%;
+    border-radius: 10%;
     outline: inherit;
     border: none;
-    color: #fff;
+    color: rgb(167, 61, 61);
 }
 
 .button #clear {
-    background-color: #f56c6c;
+    background-color: #d18585;
+    
 }
 
 .button #download {
-    background-color: deepskyblue;
+    background-color: rgb(214, 167, 36);
 }
 
-.button button svg {
+.button button img {
     width: 1.2em;
     height: 1.2em;
     transition: all 0.3s;
     margin: 0 5px;
 }
 
-svg.active {
-    fill: deepskyblue;
+img.active {
+    fill: rgb(48, 139, 170);
     transform: scale(1.2);
 }
 
-.svg {
+.img {
     right: 0;
 }
 
-.svg svg {
+.img .active{
     width: 1.8em;
     height: 1.8em;
     transition: all 0.3s;
     margin: 0 5px;
 }
-
+.img .icon{
+   width: 2.8em;
+    height: 2.8em;
+}
 .colors {
     position: fixed;
-    top: calc(50vh - 95px);
-    left: 14px;
+    top: calc(60vh);
+    right: 14px;
 }
 
 .colors>li {
@@ -97,6 +98,10 @@ svg.active {
     background: black;
 }
 
+.colors>li.blue {
+    background: blue;
+}
+
 .colors>li.red {
     background: red;
 }
@@ -105,9 +110,6 @@ svg.active {
     background: green;
 }
 
-.colors>li.blue {
-    background: blue;
-}
 
 .colors>li.active,
 .sizes>li.active {
@@ -117,7 +119,7 @@ svg.active {
 
 .sizes {
     position: fixed;
-    top: 45px;
+    top: 95px;
     right: 25px;
 }
 
