@@ -110,7 +110,6 @@ img.active {
     background: green;
 }
 
-
 .colors>li.active,
 .sizes>li.active {
     transform: scale(1.2);

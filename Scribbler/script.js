@@ -1,9 +1,7 @@
 var scribbler = document.getElementById('scribbler')
 var env = scribbler.getContext('2d')
 var line = 5
-
 set_auto(scribbler)
-
 userInput(scribbler)
 
 var enableEraser = false
